@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject _cloudParticlePrefab;
 
+    [SerializeField]
+    private float min_collision_power = 3f;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -24,7 +27,7 @@ public class Enemy : MonoBehaviour
         }
 
         //if something collide top of the object - destroy this object
-        if (collision.contacts[0].normal.y < -0.5)
+        if (collision.contacts[0].normal.y < -0.5 || collision.relativeVelocity.magnitude > min_collision_power)
         {
             Instantiate(_cloudParticlePrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);

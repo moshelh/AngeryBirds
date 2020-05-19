@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7756082235739782010}
   m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2403872999955108863}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0014702015, w: 0.9999989}
+  m_LocalRotation: {x: 0, y: 0, z: -0.0014660071, w: 0.9999989}
   m_LocalPosition: {x: 8.120182, y: -4.9966383, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.16800001}
 --- !u!212 &2403872999955108801
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -195,3 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ee7f75db9026a45b3791577ef74257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cloudParticlePrefab: {fileID: 8937019412839779431, guid: 373b29313c2b290449e3b55ea895466a,
+    type: 3}
+  min_collision_power: 10
