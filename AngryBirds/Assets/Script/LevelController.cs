@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
+
     private Enemy[] _enemies;
     private static int _nextLevelIndex = 1;
     private void OnEnable()
@@ -23,8 +24,10 @@ public class LevelController : MonoBehaviour
             }
         }
         _nextLevelIndex++;
-        string nextLevelName = "Level" + _nextLevelIndex;
-
-        SceneManager.LoadScene(nextLevelName);
+        string nextLevelName = "Level " + _nextLevelIndex;
+        if(_nextLevelIndex < 5){
+            Bird.numOfLifes = 3;
+            SceneManager.LoadScene(nextLevelName);
+        }
     }
 }
